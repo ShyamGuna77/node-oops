@@ -1,12 +1,7 @@
-class User {
-  constructor(name) {
-    this.name = name;
-  }
+let user = { name: "Sinister" };
+console.log(user);
+const cache = new WeakMap();
 
-  greet() {
-    console.log("Hello", this.name);
-  }
-}
+cache.set(user, "userdata");
 
-const u = new User("Sinister");
-u.greet(); // Hello Sinister
+console.log(cache.get(user));
