@@ -1,7 +1,16 @@
-let user = { name: "Sinister" };
-console.log(user);
-const cache = new WeakMap();
+class Bank {
+  #balance = 1000;
 
-cache.set(user, "userdata");
+  deposit(amount) {
+    this.#balance += amount;
+  }
 
-console.log(cache.get(user));
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const b = new Bank();
+b.deposit(200);
+b.getBalance();
+console.log(b.getBalance());
