@@ -32,5 +32,11 @@ class PremiumAccount extends Account {
 }
 
 const acc = new PremiumAccount("Sinister");
+const newAcc = new Account("Basic");
+newAcc.deposit(300);
+newAcc.withdraw(300);
+console.log(newAcc.getBalance()); 
 acc.deposit(500);
 console.log(acc.getBalance()); // 600
+acc.withdraw(200);
+console.log(acc.getBalance()); // 400
