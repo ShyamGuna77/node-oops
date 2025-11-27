@@ -70,7 +70,7 @@ const razorpayAdapter = new RazorpaySdk(razorpay);
 
 console.log("--- Customer 1 (PayPal) ---");
 processStorePayment(paypal, 50); 
-// Output: ✅ PayPal: Paid $50
+
 
 console.log("\n--- Customer 2 (Stripe) ---");
 // The store treats the adapter exactly like it treats PayPal
