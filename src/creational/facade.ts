@@ -30,27 +30,23 @@ class MorinigFacade {
   private coffee: CoffeeMachine;
   private lights: SmartLights;
   private tv: Tv;
-  constructor(coffee: CoffeeMachine, lights: SmartLights, tv: Tv) {
-    this.coffee = coffee;
-    this.lights = lights;
-    this.tv = tv;
+  constructor() {
+    this.coffee = new CoffeeMachine();
+    this.lights = new SmartLights();
+    this.tv = new Tv();
   }
   public WakeUp() {
     console.log("--- Waking up with MorinigFacade... ---");
     this.lights.on();
     this.lights.setBrightness(299);
     this.coffee.on();
-    this.coffee.brew();1
+    this.coffee.brew();
     this.tv.on();
     this.tv.setChannel(7);
   }
 }
 
-const coffee = new CoffeeMachine();
-const lights = new SmartLights();
-const tv = new Tv();
 
-
-const morning = new MorinigFacade(coffee, lights, tv);
+const morning = new MorinigFacade();
 
 morning.WakeUp();
