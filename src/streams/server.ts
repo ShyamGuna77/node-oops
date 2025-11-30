@@ -9,7 +9,7 @@ const filePath = process.argv[2]; // File to send
 const serverHost = process.argv[3]; // Server address like "localhost"
 
 if (!filePath || !serverHost) {
-  console.error("Usage: ts-node gzip-send.ts <filePath> <serverHost>");
+  console.error("Usage: server.ts <filePath> <serverHost>");
   process.exit(1);
 }
 
